@@ -1,0 +1,387 @@
+
+:root{
+  --labelcolorEntrega:#000;
+  /* --labelcolorPosEntrega:#b86b00; */
+}
+
+.bg {
+    padding: 20px 0;
+}
+
+/*Incio do Cabeçalho de setores.*/
+
+.cards-setores {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.tela-home {
+    display: flex;
+    background-color: #fff;
+    width: 200px;
+    height: 210px;
+    margin: 1.5%;
+    padding: 10px 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.img-tela-home {
+    width: 100px;
+    margin: 0px auto;
+}
+.text-tela-home {
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    color: #041b2b;
+}
+
+/*style dos paineis.*/
+
+.panel-panel-default,
+.panel-panel-default2 {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+
+.fluig-style-guide .panel-heading {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e7e8;
+}
+
+.text-title {
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 0px auto 0px 10px;
+}
+
+.panel-body {
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0px 10px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/*Final style dos paineis.*/
+
+
+
+/*dimenssões dos inputs*/
+
+.fluig-style-guide .form-group {
+    position: relative;
+    margin-block-start: 15px;
+}
+
+/*final das dimenssões dos inputs*/
+
+
+/*LABEL*/
+.fluig-style-guide .form-label{
+    pointer-events: none;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #6c757d;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    box-sizing: border-box;
+  }
+  /*LABEL*/
+  
+  /*INPUT*/
+  .fluig-style-guide .form-control{
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance:none;
+  }
+  
+  .fluig-style-guide .form-control:focus{
+    border: 1px solid #000;
+  }
+  
+  .fluig-style-guide .form-control::placeholder{
+    color:transparent;
+  }
+  
+  .fluig-style-guide .form-control:focus + .form-label,
+  .fluig-style-guide .form-control:not(:placeholder-shown) + .form-label{
+    font-size: 14px;
+    top: -20px;
+    color: var(--labelcolorEntrega);
+  }
+
+  .fluig-style-guide .form-control:not(:placeholder-shown) {
+    background-color: #fff;
+    padding: 10px;
+  }
+
+.fluig-style-guide #label-zoomF,
+.fluig-style-guide #label-zoomM,
+.fluig-style-guide #label-zoom {
+	font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica,
+		sans-serif;
+	font-size: 14px;
+	top: -20px;
+	color: #000;
+}
+.fluig-style-guide .form-codigo {
+  position: absolute;
+  left: 0px;
+  top: -25px;
+}
+
+/*INPUT*/
+
+/*TEXTAREA*/
+/* .fluig-style-guide .form-textarea{
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance:none;
+  }
+  
+  .fluig-style-guide .form-textarea:focus{
+    border: 1px solid #000;
+  }
+  
+  .fluig-style-guide .form-textarea::placeholder{
+    color:transparent;
+  }
+  
+  .fluig-style-guide .form-textarea:focus + .form-label,
+  .fluig-style-guide .form-textarea:not(:placeholder-shown) + .form-label{
+    font-size: 14px;
+    top: -20px;
+    color: #000;
+  }
+
+  .fluig-style-guide .form-textarea:not(:placeholder-shown) {
+    background-color: #fff;
+    padding: 10px;
+  } */
+
+  /*TEXTAREA*/
+  
+  /*SELECT*/
+  /* .fluig-style-guide .form-select{
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -webkit-appearance:none;
+  }
+  
+  .fluig-style-guide .form-select:focus{
+    border: 1px solid #000;
+  }
+  
+  .fluig-style-guide .form-select::placeholder{
+    color:transparent;
+  }
+  
+  .fluig-style-guide .form-select:focus + .form-label,
+  .fluig-style-guide .form-select:not(:placeholder-shown) + .form-label{
+    font-size: 14px;
+    top: -20px;
+    color: #000;
+  }
+
+  .fluig-style-guide .form-select:not(:placeholder-shown) {
+    background-color: #fff;
+    padding: 10px;
+  } */
+
+  /*SELECT*/
+
+  .fluig-style-guide #nome-info {
+      margin-bottom: 25px;
+  }
+
+/* style do card de tipo de urgencia e status*/
+
+.fluig-style-guide .card {
+    width: 100%;
+}
+
+.card-body p{
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.card-body .row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-body .form-group {
+    margin: auto 15px;
+}
+
+.card-body label {
+    font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.card-body #status {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+/* Fim do style do card de tipo de urgencia e status*/
+
+
+
+
+/* style do radio da Aprovação*/
+#Status { 
+    display: flex;
+    border: 1px solid #e6e7e8;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Final do style do radio da Aprovação*/
+
+/*fim do ca*/
+
+
+.fluig-style-guide > .panel-panel-default2 {
+  height: 120PX;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px; 
+  gap: 20px;
+  background-image: url(fotoNFD2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #000000de;
+}
+
+.fluig-style-guide > .panel-panel-default2 h1 {
+  margin-top: 0px;
+}
+
+
+.fluig-style-guide > .panel-panel-default2 h1 b {
+font-size: 20px;
+color: #FFF;
+}
+
+/*cabecalho - painel default*/
+
+.fluig-style-guide > .panel-panel-default2 .img-logo {
+border-left: #FFF solid 0.3px;
+padding-left: 20px;
+display: flex;
+align-items: center;
+justify-items: center;
+}
+
+.fluig-style-guide > .panel-panel-default2 > .img-logo > img{
+  height: 80px;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 420px) {
+  
+  .panel-panel-default2 {
+    margin-top: 0%;
+    height: 100px;
+    gap: 0px;
+  }
+
+  .panel-panel-default2 h1 {
+    margin-top: 0px;
+  }
+
+  .panel-panel-default2 h1 b {
+  	font-family: "League Spartan", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  .fluig-style-guide > .panel-panel-default2 { 
+    display: none;
+  }
+
+  .fluig-style-guide .form-control{
+    width: 200px;
+
+  }
+
+  .fluig-style-guide .form-textarea{
+    width: 200px;
+  }
+  .fluig-style-guide .form-select{
+    width: 200px;
+  }
+
+  .fluig-style-guide #table-group {
+    margin-top: 30px;
+  }
+}

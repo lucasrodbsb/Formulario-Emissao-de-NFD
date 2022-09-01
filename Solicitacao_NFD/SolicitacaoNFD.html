@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Emissão NFD</title>
+
+	<link type="text/css" rel="stylesheet" href="https://style.fluig.com/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js" charset="utf-8"></script>
+	<!-- <script type="text/javascript" src="zoom.js" charset="utf-8"></script> -->
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://style.fluig.com/css/fluig-style-guide.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- CUSTOM -->
+	<link href="/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+	<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
+
+	<link href='/webdesk/customresources?cid=1' type='text/css' rel='stylesheet' />
+</head>
+
+<body class="fluig-style-guide">
+
+	<div class="panel-panel-default2">
+		<h1>
+			<b>Emissão de NFD ao Fornecedor</b>
+		</h1>
+		<div class="img-logo">
+			<img src="boxicon.png">
+			<!-- <img src="logo-01.png">
+			<img src="Gatecash.white.png">
+			<img src="GSA_white.png"> -->
+		</div>
+	</div>
+	<form id="emissaoNFD">
+		<div class="panel-panel-default" id="panel_dadoscolaborador">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<b class="text-title">Dados do Solicitação</b>
+				</h3>
+			</div>
+			<div class="panel-body">
+
+				<div class="form-group col-md-3">
+					<select class="form-control" id="TipoSolicitacao" name="TipoSolicitacao">
+						<option value=" "></option>
+						<option value="entrega">Entrega</option>
+						<option value="posentrega">Pós Entrega</option>
+					</select> <label class="form-label">Tipo de Solicitação</label>
+				</div>
+				
+				<div class="form-group col-md-12" id="spacebuttom"></div>
+				<!-- <div class="form-group col-md-12"></div> -->
+
+				<div id="painelEntrega" style="width: 100%;">
+
+					<div class="form-group col-md-2">
+						<input type="text" class="form-control" id="dataSolEnt" name="dataSolEnt" value=""
+							placeholder="" readonly>
+						<label class="form-label">Data da Solicitação</label>
+					</div>
+					<div class="form-group col-md-4">
+						<input type="text" class="form-control nameSol" id="nomeEnt" name="nomeEnt" placeholder=" " readonly> <label
+							class="form-label" for="nomeEnt">Solicitante</label>
+					</div>
+					<div class="form-group col-md-3">
+						<select class="form-control" id="filialEnt" name="filialEnt">
+							<option value=""></option>
+							<option value="Pistão Sul">Pistão Sul</option>
+							<option value="Jardim Botânico">Jardim Botânico</option>
+							<option value="QNL">QNL</option>
+							<option value="SIA">SIA</option>
+							<option value="STO">STO</option>
+						</select> <label class="form-label">Filial</label>
+					</div>
+					<div class="form-group col-md-3" id="MotivoEntrega">
+						<select class="form-control" id="MotivoEntregaSelect" name="MotivoEntrega">
+							<option value=""></option>
+							<option value="Falta de Mercadoria">Falta de Mercadoria</option>
+							<option value="Mercadoria Avariada">Mercadoria Avariada</option>
+						</select> <label class="form-label">Motivo</label>
+					</div>
+					<div class="form-group col-md-3" id="bonus">
+						<input type="text" class="form-control" id="bonusinput" name="bonusinput" placeholder=" " > <label
+							class="form-label" for="bonusinput">Bonus</label>
+					</div>
+					<div class="form-group col-md-12">
+						<textarea class="form-control" name="obsitemEnt" id="obsitemEnt" rows="2" style="resize: none;" placeholder=" "></textarea>
+						<label class="form-label" for="obsitemEnt">Obs:</label>
+					</div>
+
+				</div>
+				<div id="painelPosEntrega" style="width: 100%;">
+
+					<div class="form-group col-md-2">
+						<input type="text" class="form-control" id="dataSolPosEnt" name="dataSolPosEnt" value=""
+							placeholder="" readonly>
+						<label class="form-label">Data da Solicitação</label>
+					</div>
+					<div class="form-group col-md-4">
+						<input type="text" class="form-control nameSol" id="nomePosEnt" name="nomePosEnt" placeholder=" " readonly> <label
+							class="form-label" for="nomePosEnt">Solicitante</label>
+					</div>
+					<div class="form-group col-md-3">
+						<select class="form-control" id="filialPosEnt" name="filialPosEnt">
+							<option value=""></option>
+							<option value="Pistão Sul">Pistão Sul</option>
+							<option value="Jardim Botânico">Jardim Botânico</option>
+							<option value="QNL">QNL</option>
+							<option value="SIA">SIA</option>
+							<option value="STO">STO</option>
+						</select> <label class="form-label">Filial</label>
+					</div>
+					<div class="form-group col-md-3" id="MotivoPosEntrega">
+						<select class="form-control" id="MotivoPosEntregaSelect" name="MotivoPosEntrega">
+							<option value=""></option>
+							<option value="Avaria">Avaria</option>
+							<option value="Vencimento">Vencimento</option>
+							<option value="DefeitoF">Defeito de Fábrica</option>
+						</select> <label class="form-label">Motivo</label>
+					</div>
+					<div class="form-group col-md-12">
+						<textarea class="form-control" name="obsitemPosEnt" id="obsitemPosEnt" rows="2" style="resize: none;" placeholder=" "></textarea>
+						<label class="form-label" for="obsitemPosEnt">Obs:</label>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="panel-panel-default" id="panel_itens">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<b class="text-title">Itens</b>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<table tablename="tabledetailname2" class="table" noaddbutton="true" id="tabledetailname2">
+					<thead>
+						<tr>
+							<td>
+							</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								
+								<div class="form-group col-md-6" id="table-group">
+									<input type="text" min="0" class="form-control" name="Codigo" id="Codigo" placeholder=" ">
+									<label class="form-label" for="Codigo">Codigo
+									</label>
+								
+								</div>
+								<div class="form-group col-md-2" id="table-group">
+									<input type="number" min="0" class="form-control" name="qtd" id="qtd" placeholder=" ">
+									<label class="form-label" for="qtd">Qtde
+									</label>
+								</div>
+								<div class="form-group col-md-3" id="table-group">
+									<textarea class="form-control" name="justi" id="justi" rows="1" placeholder=" "
+										style="resize:none;"></textarea>
+									<label class="form-label" for="justi">Justificativa</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="button" class="btn btn-primary" id="buttonItem"
+					onclick="wdkAddChild('tabledetailname2')">Novo item</button>
+			</div>
+		</div>
+		<div class="panel-panel-default" id="panel_dadosemissao">
+			<input type="hidden" readonly name="resuPrimeiraParte" id="resuPrimeiraParte" value="">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<b class="text-title">Emissão</b>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<div class="form-group col-md-2">
+					<input type="text" class="form-control" id="textboxData" name="textboxData" value="" placeholder=""
+						readonly>
+					<label class="form-label">Data da Emissão</label>
+				</div>
+				<div class="form-group col-md-3">
+					<input type="text" readonly class="form-control" id="nomeemissao" name="nomeemissao" placeholder=" " >
+					<label class="form-label" for="nomeemissao">Nome completo</label>
+				</div>
+				<div class="form-group col-md-3">
+					<input type="text" class="form-control" id="numeroNFD" name="numeroNFD" placeholder=" " >
+					<label class="form-label" for="numeroNFD">Nº NFD</label>
+				</div>
+				<div class="form-group col-md-4">
+					<div class="card">
+						<div class="card-body">
+							<p>Status</p>
+							<div class="row">
+								<div class="form-group col-md-1">
+									<div class="switch switch-success">
+										<label for="switch-6-1">Concluido</label> <input class="switch-input"
+											type="radio" value="concluido" name="usercolorpreference" id="switch-1-2" />
+										<label class="switch-button" for="switch-1-2">Toggle</label>
+									</div>
+								</div>
+								<div class="form-group col-md-1"></div>
+								<div class="form-group col-md-1">
+									<div class="switch switch-danger">
+										<label for="switch-1-5">Cancelado</label> <input class="switch-input"
+											type="radio" value="cancelado" name="usercolorpreference" id="switch-1-5" />
+										<label class="switch-button" for="switch-1-5">Toggle</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+
+		// $("#textboxData_Sol").val(moment().format('DD/MM/YYYY'));
+		// $("#textboxData").val(moment().format('DD/MM/YYYY'));
+
+	</script>
+</body>
+
+</html>
